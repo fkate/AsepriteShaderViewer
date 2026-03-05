@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ApplicationIcon>icon\Icon.ico</ApplicationIcon>
+    <StartupObject>AsepriteShaderViewer.Program</StartupObject>
+    <PublishTrimmed>False</PublishTrimmed>
+    <AppDesignerFolder>properties</AppDesignerFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="extension\**" />
+    <EmbeddedResource Remove="extension\**" />
+    <None Remove="extension\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="icon\Icon.ico" />
+    <EmbeddedResource Include="icon\Icon_x32.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Silk.NET.Input" Version="2.23.0" />
+    <PackageReference Include="Silk.NET.OpenGL" Version="2.23.0" />
+    <PackageReference Include="Silk.NET.Windowing" Version="2.23.0" />
+    <PackageReference Include="WatsonWebsocket" Version="4.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="src\objects\Mesh.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>

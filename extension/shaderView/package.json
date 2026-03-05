@@ -1,0 +1,19 @@
+{
+  "name": "shaderView",
+  "displayName": "Shader View",
+  "description": "External view for rendering sprites with shaders.",
+  "version": "1.0",
+  "author": { "name": "Felix Kate", "url": "http://github.com/fkate/AsepriteShaderViewer" },
+  "publisher": "Felix Kate",
+  "license": "MIT",
+  "categories": [
+    "Scripts"
+  ],
+  "contributes": {
+	"scripts": [
+		{
+			"path": "ShaderView.lua"
+		}	
+	]
+  }
+}
