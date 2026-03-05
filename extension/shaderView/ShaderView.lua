@@ -64,7 +64,7 @@ function FileManager:listFiles(ext)
 end
 
 -- Find the shaderScript script to a shader (Internal use)
-function FileManager:findshaderScriptScript(path)
+function FileManager:findShaderScript(path)
 	path = string.gsub(path, ".glsl", ".lua")
 	path = self.filePath .. path
 	
@@ -86,6 +86,7 @@ function FileManager:openFileFolder()
 	end
 end
 
+-- Convert a path into a path relative to the plugin
 function FileManager:getLocalPath(path)
 	return self.pluginPath .. app.fs.normalizePath(path)
 end
@@ -530,7 +531,7 @@ function setFile()
 		Client:sendShader(text)
 		
 		-- Try execute shaderScript lua file with same name as shader
-		shaderScript = FileManager:findshaderScriptScript(dialog.data.shaderbox)
+		shaderScript = FileManager:findShaderScript(dialog.data.shaderbox)
 		
 		if shaderScript ~= nil then
 			shaderScript:setup(FileManager, Client)
