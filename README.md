@@ -1,6 +1,8 @@
 # AsepriteShaderViewer <img width="64" height="64" alt="Icon_x64" src="https://github.com/user-attachments/assets/f61b57f3-b3da-45f5-8c24-d3e7518f471b" />
 
-> :warning: This extension requires a 1.3+ version of Aseprite
+> :warning: This extension requires a 1.3+ version of Aseprite<br>
+> Note: There is currently a bug with the newer Aseprite versions that can cause the active cel to jump to (0, 0) when drawing while the extension active.
+> A new version of this extension will be released later this week with a workaround and new features.
 
 ## About
 Extension for Aseprite to preview sprites with custom GLSL shaders in realtime. Uses a Silk.Net / OpenGL view and local websockets to allow for cross platform compability.
